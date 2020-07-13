@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ListApplication</string>
+    <string name="no_connection">No internet connection, please try again later</string>
+
 </resources>

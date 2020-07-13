@@ -1,7 +1,8 @@
-package com.ankit.listapplication
+package com.ankit.listapplication.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ankit.listapplication.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
