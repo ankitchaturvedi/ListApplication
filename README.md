@@ -1,6 +1,16 @@
 ## ListAssignment
-A bit overview, it uses API to get infoData and get JSON data back. Then it is parsed using google's gson library and the requests are sent by Retrofit.
+A bit overview, it uses API to get Users Data and get JSON data back. Then it is parsed using google's gson library and the requests are sent by Retrofit.
 In this project show info data into recyclerview by use android MVVM design pattern.Glide is use for fast and efficient image loading.
+
+```
+Working Flow -:
+* In Application api request is creating for User Data on loading home page, .
+* On successfull response with data from api, old data delete from local databse and new data insert into DB.
+* After completeing local database insert process, data is set into Recycle View.
+* On screen pull refreshing same upper flow is following.
+* If internet is not available , data is showing from local database.
+
+```
 
 ## Getting Started
 
@@ -22,7 +32,6 @@ android {
  // retrofit
     implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
     implementation 'com.squareup.retrofit2:retrofit:2.6.0'
-
 
     //Recycler View
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
@@ -47,6 +56,7 @@ Add additional notes about how to deploy this on a live system
 * [RETROFIT](https://square.github.io/retrofit/) - REST Client library (Helper Library) used
 * [GRADLE](https://developer.android.com/studio/build) - Dependency Management
 * [GLIDE](https://github.com/bumptech/glide) - Used image loading framework for Android
+* [Room DataBase]() - Used as database for store data on device.
 
 ## Contributing
 
