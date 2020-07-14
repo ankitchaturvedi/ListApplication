@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">ListApplication</string>
+    <string name="cancel">Cancel</string>
+    <string name="api_data">Data From API</string>
+    <string name="db_data">Data From DB</string>
+    <string name="some_thing_went_wrong">Data not get from API,please try again.</string>
     <string name="no_connection">No internet connection, please try again later</string>
+    <string name="please_wait_server">Please wait data get from server.</string>
+    <string name="please_wait_database">Please wait data get from DataBase.</string>
+    <string name="blank_data">"No Data available in Database."</string>
+    <string name="data_not_insert">Data not add in local DataBase.</string>
 
 </resources>

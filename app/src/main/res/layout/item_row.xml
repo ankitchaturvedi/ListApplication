@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/five_dp"
             android:elevation="3dp"
             card_view:cardCornerRadius="1dp">
 
@@ -30,12 +30,12 @@
 
                 <ImageView
                     android:id="@+id/ivPic"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitXY"
                     android:adjustViewBounds="true"
-                    android:layout_margin="4dp"
+                    android:layout_margin="@dimen/five_dp"
                     android:src="@drawable/no_image"
                     bind:avatar = "@{userModel.avatar}"
                     android:gravity="bottom"/>
@@ -50,12 +50,14 @@
                         android:id="@+id/tvName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="@dimen/medium_text_size"
                         android:text="@{userModel.first_name+' '+userModel.last_name}"/>
 
                     <TextView
                         android:id="@+id/tvEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="@dimen/small_text_size"
                         android:text="@{userModel.email}"/>
 
                 </LinearLayout>

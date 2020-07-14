@@ -9,19 +9,19 @@ import com.ankit.listapplication.R
 
 class MessageShow {
 
-    fun showToast(context: Context?, message: String?) {
-        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+    companion object{
+        fun showToast(context: Context?, message: String?) {
+            Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+        }
+
+        fun showToast(context: Context?, message: Int) {
+            Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+        }
+
+        fun noInternetConnection(context: Context?) {
+            Toast.makeText(context, R.string.no_connection, Toast.LENGTH_LONG).show()
+        }
     }
-
-
-    fun showToast(context: Context?, message: Int) {
-        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
-    }
-
-    fun noInternetConnection(context: Context?) {
-        Toast.makeText(context, R.string.no_connection, Toast.LENGTH_LONG).show()
-    }
-
 
     fun showMessage(context: Context?, msg: String?) {
         if (context != null) {

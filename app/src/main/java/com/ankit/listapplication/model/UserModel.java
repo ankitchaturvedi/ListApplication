@@ -82,6 +82,7 @@ public class UserModel implements Serializable {
         this.avatar = avatar;
     }
 
+    // Show avatar image in ImageView
     @BindingAdapter({"avatar"})
     public static void loadImage(ImageView imageView, String imageURL) {
         if (imageURL != null) {

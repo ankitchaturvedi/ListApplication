@@ -4,12 +4,19 @@ import android.app.Activity
 import android.content.Context
 import android.net.ConnectivityManager
 
-
 object NetworkHelper {
     fun isOnline(context: Context): Boolean {
-        val connMgr = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val networkInfo = connMgr.activeNetworkInfo
-        return networkInfo != null && networkInfo.isConnected
+        var have_WIFI = false
+        var have_MobileData = false
+        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val networkInfos = connectivityManager.allNetworkInfo
+        for (info in networkInfos) {
+            if (info.typeName.equals("WIFI", ignoreCase = true)
+            ) if (info.isConnected) have_WIFI = true
+            if (info.typeName.equals("MOBILE DATA", ignoreCase = true)
+            ) if (info.isConnected) have_MobileData = true
+        }
+        return have_WIFI || have_MobileData
     }
 
     fun isMobileDataOn(activity: Activity): Boolean {
@@ -21,7 +28,7 @@ object NetworkHelper {
             method.isAccessible = true
             mobileDataEnabled = method.invoke(cm) as Boolean
         } catch (e: Exception) {
-            System.out.print(e);
+            print(e);
         }
 
         return mobileDataEnabled
